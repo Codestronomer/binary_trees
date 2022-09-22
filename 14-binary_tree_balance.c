@@ -17,8 +17,14 @@ int recursive_height(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	lHeight = recursive_height(tree->left) + 1;
-	rHeight = recursive_height(tree->right) + 1;
+	if (tree->left)
+		lHeight = recursive_height(tree->left) + 1;
+	else
+		lHeight = 0;
+	if (tree->right)
+		rHeight = recursive_height(tree->right) + 1;
+	else
+		rHeight = 0;
 
 	if (lHeight > rHeight)
 		return (lHeight);
