@@ -4,7 +4,7 @@
 
 
 /**
- * get_binary_tree_depth - helper function to measure the depth 
+ * get_binary_tree_depth - helper function to measure the depth
  * of a node in a binary tree
  *
  * @tree: a pointer to the node to measure the depth
