@@ -1,3 +1,7 @@
+#include "binary_trees.h"
+#include <stdlib.h>
+
+
 /**
  * recursive_height - measures the height of a binary tree
  *
