@@ -75,4 +75,10 @@ int binary_tree_is_avl(const binary_tree_t *tree);
 binary_tree_t *find_root(binary_tree_t *node);
 binary_tree_t *findLCA(binary_tree_t *root, const binary_tree_t *first,
 		const binary_tree_t *second);
+unsigned int countNodes(const binary_tree_t *root);
+int is_complete(const binary_tree_t *root, unsigned int index,
+		unsigned int n_nodes);
+int binary_tree_is_leaf(const binary_tree_t *node);
+int check_parents(const binary_tree_t *node);
+bst_t *add_node_bst(bst_t **tree, int value);
 #endif

@@ -31,27 +31,27 @@ binary_tree_t *findLCA(binary_tree_t *root, const binary_tree_t *first,
 	binary_tree_t *leftLCA;
 	binary_tree_t *rightLCA;
 
-	// Base case
+	/* Base case */
 	if (root == NULL)
 		return (NULL);
 
-	// if either first or second matches with root, report
-	// the presence by returning root
+	/* if either first or second matches with root, report */
+	/* the presence by returning root */
 	if (root == first || root == second)
 		return (root);
 
-	// Look for first or second in left and right subtrees
+	/* Look for first or second in left and right subtrees */
 	leftLCA = findLCA(root->left, first, second);
 	rightLCA = findLCA(root->right, first, second);
 
-	// If both of the above calls return Non-NULL, then one
-	// key is present in once subtree and other is present
-	// in other, so this node is the LCA
+	/* If both of the above calls return Non-NULL, then one */
+	/* key is present in once subtree and other is present */
+	/* in other, so this node is the LCA */
 	if (leftLCA && rightLCA)
 		return (root);
 
-	// Otherwise check if left subtree or right subtree is LCA
-	return (leftLCA != NULL) ? leftLCA : rightLCA;
+	/* Otherwise check if left subtree or right subtree is LCA */
+	return ((leftLCA != NULL) ? leftLCA : rightLCA);
 }
 
 
@@ -66,6 +66,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
 	binary_tree_t *root;
+
 	if ((first == NULL) || (second == NULL))
 		return (NULL);
 
